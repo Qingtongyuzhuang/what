@@ -4,77 +4,230 @@
     <meta charset="utf-8" />
   </head>
   <body style="height: 100%; margin: 0">
-    <div id="container" style="height: 100%"></div>
+    <div id="container" style="height: 100%">数组的Prototype里有什么</div>
 
     <script type="text/javascript">
       // ------------------------------------数组的Prototype里有什么---------------------------------
 
-      // ------------------at() 方法---------------------
-      // 当index>=0时 a[index]=a.at(index)
-      // 当index<0时  a[a.length+index]=a.at(index)
+      // ------------------at()---------------------
+      // 当index>=0时 a_at[index]=a_at.at(index)
+      // 当index<0时  a_at[a_at.length+index]=a_at.at(index)
       // 当index值为超出length范围时
-      // let a = [1, 2, 3, 4, 5];
-      // console.log(a[index]);
-      // console.log(a.at(index));
-      // console.log(a[999]); //undefined
-      // console.log(a.at(99)); //undefined
-      // console.log(a.at(-99)); //undefined
+      let a_at = [1, 2, 3, 4, 5];
+      let index=1
+      console.log(a_at[index]);
+      console.log(a_at.at(index));
+      console.log(a_at[999]); //undefined
+      console.log(a_at.at(99)); //undefined
+      console.log(a_at.at(-99)); //undefined
 
-      // --------------------concat()方法-----------------
-      // let concatArr1 = [11, 12, 13, 14];
-      // let concatArr2 = [21, 22, 23, 24];
-      // let concatArr3 = [31, 32, 33, 34];
-      // let concatArr4 = ["str1", "str2", "ste3"];
-      // let concatArr5 = [(a = 51), (w = 52)];
-      // let concatArr6 = [{ w: 61 }, [(a = 62)]];
-      // let concatArr7 = [
-      //   [71, 71, 71],
-      //   [72, 72, 72],
-      // ];
-      // console.log(concatArr1.concat(concatArr2));
-      // console.log(concatArr1.concat(concatArr2, concatArr3));
-      // console.log(concatArr1.concat(concatArr2, concatArr4));
-      // console.log(concatArr1.concat(concatArr2, concatArr5));
-      // console.log(concatArr1.concat(concatArr2, concatArr6));
-      // console.log(concatArr1.concat(concatArr2, concatArr7));
+      // --------------------concat()-----------------
+      let concatArr1 = [11, 12, 13, 14];
+      let concatArr2 = [21, 22, 23, 24];
+      let concatArr3 = [31, 32, 33, 34];
+      let concatArr4 = ["str1", "str2", "ste3"];
+      let concatArr5 = [(a = 51), (w = 52)];
+      let concatArr6 = [{ w: 61 }, [(a = 62)]];
+      let concatArr7 = [
+        [71, 71, 71],
+        [72, 72, 72],
+      ];
+      console.log(concatArr1.concat(concatArr2));
+      console.log(concatArr1.concat(concatArr2, concatArr3));
+      console.log(concatArr1.concat(concatArr2, concatArr4));
+      console.log(concatArr1.concat(concatArr2, concatArr5));
+      console.log(concatArr1.concat(concatArr2, concatArr6));
+      console.log(concatArr1.concat(concatArr2, concatArr7));
 
       // ------------------constructor()--------------------
-      // ------------Array.from()-----------
+
+      //>>>>>-------Array.from()-----------
       // 类数组转化为数组
       // 看起来像数组的对象
       // 可遍历对象（iterable）
       // 有length
-      // let arrayLike = {
-      //   0: "a",
-      //   1: "b",
-      //   2: "c",
-      //   length: 3,
-      // };
-      // console.log(Array.from(arrayLike));
-      // // Array.from(arrayLike, (x) => x * x);
-      // // 等同于
-      // // Array.from(arrayLike).map((x) => x * x);
-      // console.log(Array.from([1, 2, 3], (x) => x * x)); // [1, 4, 9]
+      let arrayLike = {
+        0: "a",
+        1: "b",
+        2: "c",
+        length: 3,
+      };
+      console.log(Array.from(arrayLike));
+      // Array.from(arrayLike, (x) => x * x);
+      // 等同于
+      // Array.from(arrayLike).map((x) => x * x);
+      console.log(Array.from([1, 2, 3], (x) => x * x)); // [1, 4, 9]
 
-      // ------------ Array.isArray()--------------
-      // let isArrayArr1 = [11, 12, 13, 14];
-      // let isArrayArr2 = [];
-      // let isArrayArr3 = 10;
-      // let isArrayArr4 = "123";
-      // let isArrayArr5 = null;
-      // let isArrayArr6 = NaN;
-      // let isArrayArr7 = undefined;
-      // console.log(Array.isArray(isArrayArr1)); //true
-      // console.log(Array.isArray(isArrayArr2)); //true
-      // console.log(Array.isArray(isArrayArr3)); //false
-      // console.log(Array.isArray(isArrayArr4)); //false
-      // console.log(Array.isArray(isArrayArr5)); //false
-      // console.log(Array.isArray(isArrayArr6)); //false
-      // console.log(Array.isArray(isArrayArr7)); //false
+      // >>>>>------- Array.isArray()--------------
+      // 判断是否是数组
+      let isArrayArr1 = [11, 12, 13, 14];
+      let isArrayArr2 = [];
+      let isArrayArr3 = 10;
+      let isArrayArr4 = "123";
+      let isArrayArr5 = null;
+      let isArrayArr6 = NaN;
+      let isArrayArr7 = undefined;
+      console.log(Array.isArray(isArrayArr1)); //true
+      console.log(Array.isArray(isArrayArr2)); //true
+      console.log(Array.isArray(isArrayArr3)); //false
+      console.log(Array.isArray(isArrayArr4)); //false
+      console.log(Array.isArray(isArrayArr5)); //false
+      console.log(Array.isArray(isArrayArr6)); //false
+      console.log(Array.isArray(isArrayArr7)); //false
 
-      // ------------ Array.isArray()--------------
-      测试1111
-      
+      // >>>>------ Array.of()--------------
+      // Array.of()方法用于将一组数值转换为数组
+      console.log(Array()); // []
+      console.log(Array.of()); // []
+      console.log(Array(3)); // [, , ,]
+      console.log(Array.of(1)); // [1]
+      console.log(Array(3, 11, 8)); // [3, 11, 8]
+      console.log(Array.of(1, 2)); // [1, 2]
+      console.log(Array.of(undefined)); // [undefined]
+
+      // ------------------------array.copyWithin(target, start, end)--------------------------------------
+      // 用于从数组的指定位置拷贝元素到数组的另一个指定位置中;
+      var copyWithinArr = [
+        "Banana",
+        "Orange",
+        "Apple",
+        "Mango",
+        "111",
+        "222",
+        "333",
+        "444",
+        "555",
+      ];
+      console.log(copyWithinArr.copyWithin(2, 0));
+      //copyWithinArr[2]copyWithinArr[length-1] 的值 被重新赋值为 copyWithinArr[0]copyWithinArr[length-3]
+      // ['Banana', 'Orange', 'Banana', 'Orange', 'Apple', 'Mango', '111', '222', '333']
+      var copyWithinArr2 = [
+        "Banana",
+        "Orange",
+        "Apple",
+        "Mango",
+        "Kiwi",
+        "Papaya",
+        "111",
+        "222",
+        "333",
+        "444",
+        "555",
+      ];
+      console.log(copyWithinArr2.copyWithin(2, 0, 2));
+      //copyWithinArr2[2]copyWithinArr2[3] 的值 被重新赋值为 copyWithinArr2[0]copyWithinArr2[1]的值  copyWithinArr2[4]之后不改变
+      // // ['Banana', 'Orange', 'Banana', 'Orange', 'Kiwi', 'Papaya', '111', '222', '333', '444', '555']
+
+      //-----------------------------------------array.entries()-----------------------------------------------
+      // 返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。
+      let entriesarr = ["red", "yellow", "orange", "pink"];
+      let i = entriesarr.entries();
+      console.log(i);
+      console.log(i.next().value); //[0, "red"]
+      console.log(i.next().value); //[1, "yellow"]
+      for (let e of i) {
+        console.log(e);
+      }
+
+      // 拓展  ：
+      // -----------------------Object.entries()-----------------------
+      // 返回一个数组，其元素是与直接在object上找到的可枚举属性键值对相对应的数组。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
+      let person = {
+        name: "lisa",
+        age: 12,
+        adress: "北京",
+        show: function () {},
+      };
+      console.log(Object.entries(person));
+      // [Array(2), Array(2), Array(2), Array(2)]
+      // 0: (2) ['name', 'lisa']
+      // 1: (2) ['age', 12]
+      // 2: (2) ['adress', '北京']
+      // 3: (2) ['show', ƒ]
+      // length: 4
+      // [[Prototype]]: Array(0)
+
+      // // -----------------------Object.fromEntries()-----------------------
+      // // 该方法把键值对列表转换为一个对象。Object.fromEntries() 是 Object.entries 的反转
+      let fromEntriesArr = new Map([
+        ["name", "张三"],
+        ["age", "12"],
+        ["address", "北京"],
+      ]); //定义一个Map键值对
+      let b = Object.fromEntries(fromEntriesArr); //把Map转化成一个对象
+      console.log(b); //{name: "张三", age: "12", address: "北京"}
+      let fromEntriesArr2 = [
+        ["name", "张三"],
+        ["age", "12"],
+        ["address", "北京"],
+      ];
+      let b2 = Object.fromEntries(fromEntriesArr2); //把数组转化成一个对象
+      console.log(b2); //{name: "张三", age: "12", address: "北京"}
+
+      //-----------------------------array.every()-------------------------
+      // 全部满足返回true， 有一个不满足返回false且不在继续
+      let everyArr = [1, 2, 3, 4, 5, 6, 7, 8];
+      console.log(
+        everyArr.every((item, index) => {
+          console.log(item, index);
+          return item <= 7;
+        })
+      );
+
+      //-----------------------------array.fill()-------------------------
+      // 填充 array.fill(value, start, end)
+      let fillArr = ["aa", "aa", "aa", "aa", "aa", "aa", "aa", "aa", "aa", "aa"];
+      // console.log(fillArr.fill("bb"));
+      console.log(fillArr.fill("bb",2,4));  //填充 index 2~4  不包括4
+
+      //-----------------------------array.filter()-------------------------
+      // 过滤   返回新数组  不改变原数组
+      var filterArr = [1, 2, 4, 5, 6, 9, 10, 15];
+      var filterArrr = filterArr.filter(i => {
+       return i > 3;
+      });
+      console.log(filterArr, filterArrr);
+
+      //-----------------------------array.find()-------------------------
+      // 过滤  返回符合条件的第一个元素  没有返回undefined
+      var findArr = [1, 2, 4, 5, 6, 9, 10, 15];
+      var findArrr = findArr.find((i) => {
+        return i > 3;
+      });
+      console.log(findArr, findArrr);
+
+      //-----------------------------array.findIndex()-------------------------
+      // 过滤  返回符合条件的第一个元素的下标  没有返回undefined
+      var findIndexArr = [1, 2, 4, 5, 6, 9, 10, 15];
+      var findIndexArrr = findIndexArr.findIndex((i) => {
+        return i > 3;
+      });
+      console.log(findIndexArr, findIndexArr);
+
+      //-----------------------------array.flat()-------------------------
+      // 降维  可选层数 默认1   Infinity为无穷大    返回新数组
+      var flatArray1 = [1, 2, [3, 4], [[5, 6]], [[[7, 8]]], [[[[9, 10]]]]];
+      var flatArray2 =flatArray1.flat();
+      var flatArray2 = flatArray1.flat(2);
+      var flatArray2 = flatArray1.flat(Infinity);
+      console.log(flatArray1, flatArray2);
+
+      //-----------------------------array.flatMap()-------------------------
+      let flatMapArr = [10, 20, 30, 50, 40];
+      let flatMapArrA = flatMapArr.flatMap((x) => {
+        // return [x] 返回等于  return x的返回  [10, 20, 30, 50, 40];
+        return [[x]];// [[10], [20], [30], [50], [40]]
+        return [[x],"wer"+x];
+      });
+      let flatMapArrB = flatMapArr.map((x) => {
+        return [x];//  [10, 20, 30, 50, 40];
+      });
+      let flatMapArr1 = ["it's Sunny in", "", "California"];
+      flatMapArr1.map((x) => x.split(" "));
+      // [["it's","Sunny","in"],[""],["California"]]
+      flatMapArr1.flatMap((x) => x.split(" "));
+      // ["it's","Sunny","in", "", "California"]
+      console.log(flatMapArrA);
     </script>
   </body>
 </html>
