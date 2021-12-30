@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript">
+      // ------------------------------------数组的Prototype里有什么---------------------------------
+
+      // ------------------at() 方法---------------------
+      // 当index>=0时 a[index]=a.at(index)
+      // 当index<0时  a[a.length+index]=a.at(index)
+      // 当index值为超出length范围时
+      // let a = [1, 2, 3, 4, 5];
+      // console.log(a[index]);
+      // console.log(a.at(index));
+      // console.log(a[999]); //undefined
+      // console.log(a.at(99)); //undefined
+      // console.log(a.at(-99)); //undefined
+
+      // --------------------concat()方法-----------------
+      // let concatArr1 = [11, 12, 13, 14];
+      // let concatArr2 = [21, 22, 23, 24];
+      // let concatArr3 = [31, 32, 33, 34];
+      // let concatArr4 = ["str1", "str2", "ste3"];
+      // let concatArr5 = [(a = 51), (w = 52)];
+      // let concatArr6 = [{ w: 61 }, [(a = 62)]];
+      // let concatArr7 = [
+      //   [71, 71, 71],
+      //   [72, 72, 72],
+      // ];
+      // console.log(concatArr1.concat(concatArr2));
+      // console.log(concatArr1.concat(concatArr2, concatArr3));
+      // console.log(concatArr1.concat(concatArr2, concatArr4));
+      // console.log(concatArr1.concat(concatArr2, concatArr5));
+      // console.log(concatArr1.concat(concatArr2, concatArr6));
+      // console.log(concatArr1.concat(concatArr2, concatArr7));
+
+      // ------------------constructor()--------------------
+      // ------------Array.from()-----------
+      // 类数组转化为数组
+      // 看起来像数组的对象
+      // 可遍历对象（iterable）
+      // 有length
+      // let arrayLike = {
+      //   0: "a",
+      //   1: "b",
+      //   2: "c",
+      //   length: 3,
+      // };
+      // console.log(Array.from(arrayLike));
+      // // Array.from(arrayLike, (x) => x * x);
+      // // 等同于
+      // // Array.from(arrayLike).map((x) => x * x);
+      // console.log(Array.from([1, 2, 3], (x) => x * x)); // [1, 4, 9]
+
+      // ------------ Array.isArray()--------------
+      // let isArrayArr1 = [11, 12, 13, 14];
+      // let isArrayArr2 = [];
+      // let isArrayArr3 = 10;
+      // let isArrayArr4 = "123";
+      // let isArrayArr5 = null;
+      // let isArrayArr6 = NaN;
+      // let isArrayArr7 = undefined;
+      // console.log(Array.isArray(isArrayArr1)); //true
+      // console.log(Array.isArray(isArrayArr2)); //true
+      // console.log(Array.isArray(isArrayArr3)); //false
+      // console.log(Array.isArray(isArrayArr4)); //false
+      // console.log(Array.isArray(isArrayArr5)); //false
+      // console.log(Array.isArray(isArrayArr6)); //false
+      // console.log(Array.isArray(isArrayArr7)); //false
+
+      // ------------ Array.isArray()--------------
+    </script>
+  </body>
+</html>
